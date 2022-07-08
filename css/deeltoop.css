@@ -64,7 +64,8 @@
 }
 #footer-wrap a
 {
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.799);
+    font-weight: 600;
 }
 
   #pagination .page-number.current {
@@ -74,11 +75,11 @@
     background-color: #74b49b;
     color: white;
     border-radius: 40px 40px 0 40px;
-    box-shadow: 0 5px 5px 0px #74b49b57;
+    box-shadow: none;
     transition-duration: 350ms;
 }#aside-content .card-info #card-info-btn:hover {
     background-color: #74b49bd1;
-    box-shadow: none;
+    box-shadow: 0 5px 5px 0px #74b49b57;
 }
 #rightside > div > button, #rightside > div > a {
     border-radius: 50px;
@@ -371,6 +372,13 @@ hr::before
         text-align: left;
     }
 }
+@media(max-width:900px) 
+{
+    #page-header.post-bg:before
+    {
+        display: none !important;
+    }
+}
 #post
 {
     transform:translateY(-130px);
@@ -385,6 +393,16 @@ hr::before
 {
     transform: unset !important;
     padding-top: 10px !important;
+}
+
+#post-info #post-meta
+{
+    
+    background-color: unset;
+    backdrop-filter: blur(8px) brightness(85%);
+    width: 90%;
+    border-radius: 8px;
+    padding: 15px 5px 15px 15px;
 }
 }
 
@@ -462,6 +480,10 @@ hr::before
 {
     background: unset !important;
     color: #74b49b !important;
+}
+.post-reward
+{
+    margin: 0 !important;
 }
 .sknotice
 {
@@ -744,6 +766,14 @@ table
     font-weight: bold;
     color: rgba(255, 255, 255, 0.121) !important;
     font-size: 18px !important;
+}
+hr
+{
+    margin: 20px !important;
+}
+#pagination.pagination-post
+{
+    margin: 0 !important;
 }
 @media (max-width: 900px)
 {
