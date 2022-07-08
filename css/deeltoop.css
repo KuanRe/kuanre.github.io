@@ -12,6 +12,10 @@
     font-weight: normal;
     font-style: normal;
 }
+body
+{
+    overflow-y:overlay !important;
+}
 *
 {
     font-family: 'a';
@@ -48,6 +52,9 @@
 }
 /*滚动条滑块样式*/
 *::-webkit-scrollbar-thumb{
+    background-color: #74b49bd3;
+}
+*::-webkit-scrollbar-thumb:hover{
     background-color: #74b49b;
 }
 /*滚动条上的按钮--垂直滚动条向上按钮*/
