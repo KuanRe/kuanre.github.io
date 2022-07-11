@@ -7,13 +7,6 @@
 
 @font-face 
 {
-    font-family: 'a';
-    src: url("本墨字语.ttf");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face 
-{
     font-family: 'b';
     src: url("本墨咏黑.ttf");
     font-weight: normal;
@@ -25,7 +18,7 @@ body
 }
 *
 {
-    font-family: 'a','b';
+    font-family: 'b';
 
 
     -moz-user-select: none;
