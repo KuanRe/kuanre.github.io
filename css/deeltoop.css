@@ -120,6 +120,7 @@ body
     backdrop-filter: blur(7px);
     margin-top: 18px;
     padding: 20px;
+    border-top: 2px rgba(255, 255, 255, 0.299) solid;
 }
 #footer-wrap
 {
