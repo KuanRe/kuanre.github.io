@@ -7,6 +7,46 @@
 
 @font-face 
 {
+    font-family: 'a';
+    src: url("FZYouHJW_503L.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+#article-container .flink .flink-list > .flink-list-item::before {
+    background-color: var(--skb);
+}
+#article-container .flink .flink-list > .flink-list-item
+{
+    border: 2px dashed var(--ska);
+}
+#article-container .flink .flink-list > .flink-list-item a .flink-item-icon
+{
+    border-radius: 1000px;
+    border: 3px solid var(--ska);
+    padding: 0;
+}
+#article-container .flink .flink-list > .flink-list-item a .flink-item-icon img
+{
+    margin: 0;
+}
+.img-alt
+{
+    margin: 10px !important;
+    font-size: small !important;
+    padding: 0 !important;
+}
+.img-alt
+{
+    text-indent: 0 !important;
+}
+article p
+{
+    font-family: 'a' !important;
+    font-size: 19px !important;
+    text-indent: 2em;
+}
+@font-face 
+{
     font-family: 'b';
     src: url("本墨咏黑.ttf");
     font-weight: normal;
@@ -36,7 +76,7 @@ body
 }
 ::selection
 {
-    background-color: #74b49b;
+    background-color: var(--ska);
     color: white;
 }
 /*整个滚动条的样式*/
@@ -52,7 +92,7 @@ body
 }
 /*滚动条滑块样式*/
 *::-webkit-scrollbar-thumb{
-    background-color: #74b49b;
+    background-color: var(--ske);
 }
 /*滚动条上的按钮--垂直滚动条向上按钮*/
 *::-webkit-scrollbar-button:decrement {
@@ -66,6 +106,25 @@ body
     background: rgba(158, 233, 233, 0) 0px -2px no-repeat;
     border:0px solid #F1F1F1;
 }
+#sidebar #menu-mask
+{
+    backdrop-filter: blur(5px) !important;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+#nav #toggle-menu
+{
+    display: inline !important;
+}
+.skfoot
+{
+    backdrop-filter: blur(7px);
+    margin-top: 18px;
+    padding: 20px;
+}
+#footer-wrap
+{
+    padding: 40px 0 0px 0 !important;
+}
 #footer
 {
     background-attachment: fixed !important;
@@ -77,26 +136,30 @@ body
 }
 
   #pagination .page-number.current {
-    background: #74b49b !important;
+    background: var(--ska) !important;
 }
 #aside-content .card-info #card-info-btn {
-    background-color: #74b49b;
+    background-color: var(--ska);
     color: white;
     border-radius: 40px 40px 0 40px;
     box-shadow: none;
     transition-duration: 350ms;
 }#aside-content .card-info #card-info-btn:hover {
-    background-color: #74b49bd1;
-    box-shadow: 0 5px 5px 0px #74b49b57;
+    background-color: var(--ska);
+    box-shadow: 0 5px 5px 0px var(--skb);
+}
+#aside-content .card-webinfo .webinfo .webinfo-item div:first-child
+{
+    color: var(--skc);
 }
 #rightside > div > button, #rightside > div > a {
     border-radius: 50px;
-    background-color: #74b49b;
+    background-color: var(--ska);
     color: white;
     transition-duration: 300ms;
 }
 #rightside > div > button:hover, #rightside > div > a:hover {
-    background-color: #74b49b;
+    background-color: var(--ska);
     opacity: 0.7;
     transition-duration: 300ms;
     transform: scale(1.1); 
@@ -121,7 +184,7 @@ body
     border-radius: 8px !important;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-title:hover {
-    color: #74b49b !important;
+    color: var(--ska) !important;
     text-decoration: none !important;
 }
 
@@ -132,7 +195,7 @@ body
 }*/
 
     #aside-content #card-toc .toc-content .toc-link.active {
-        background: #74b49b;
+        background: var(--ska);
         color: #fff;
         border-radius: 4px !important;
     }
@@ -193,8 +256,8 @@ body
 
 #post .tag_share .post-meta__tags
 {
-    border-color: #74b49b;
-    color: #74b49b;
+    border-color: var(--ska);
+    color: var(--ska);
     border-radius: 4px;
 }
 #post .tag_share .post-meta__tags:hover
@@ -206,35 +269,54 @@ hr {
     position: relative;
     margin: 40px auto;
     border: none;
-    border-bottom: 2px dashed #74b49b85;
+    border-bottom: 2px dashed var(--ska);
     width: calc(100% - 4px);
 }
 hr::before
 {
-    color: #74b49b;
+    color: var(--ska);
 }
-
+#aside-content .card-info .author-info__description
+{
+    margin-top: -6px !important;
+}
+.gt-container .gt-user
+{
+    opacity: 0.08;
+}
+.gt-container .gt-user:hover
+{
+    opacity: 1;
+}
 .gt-container .gt-comment-admin .gt-comment-content
 {
+    
+    transition-duration: 400ms !important;
     background-color: rgba(0, 0, 0, 0.040) !important;
     box-shadow: none !important;
-    padding-bottom: 20px;
-    border-radius: 0 10px 10px 20px;
-    color: var(--font-color);
+    padding-bottom: 20px !important;
+    border-radius: 0 10px 10px 20px !important;
+    padding: 25px !important;
+    color: var(--font-color) !important;
 }
 .gt-container .gt-comment-admin .gt-comment-content:hover
 {
+    
+    box-shadow: 0 0 23px rgba(0, 0, 0, 0.082) !important;
     background-color: rgba(0, 0, 0, 0) !important;
-    box-shadow: none !important;
+}
+.gt-container .gt-avatar img
+{
+    border: 3px solid rgba(0, 0, 0, 0.142);
 }
 .gt-container .gt-header-controls .gt-btn
 {
-    background-color: #74b49b!important;
+    background-color: var(--ska) !important;
     color: white !important;
     border: none !important;
     border-radius: 20px 15px 0 20px !important;
     transition-duration: 300ms;
-    box-shadow: 0 5px 5px 0px #74b49b31;
+    box-shadow: 0 5px 5px 0px var(--skb);
     border: none !important;
 }
 .gt-container .gt-header-controls .gt-btn:hover
@@ -248,21 +330,26 @@ hr::before
 }
 .gt-container .gt-header-textarea
 {
-    background-color: var(--card-bg) !important;
+    background-color: rgba(0, 0, 0, 0.027) !important;
     padding-top: 15px !important;
     border-radius: 15px 20px 0 15px !important;
-    border: 1px dashed #74b49b00;
+    border: 1px dashed rgba(0, 0, 0, 0.027) !important;
     min-height: 10px !important;
     resize: vertical !important;
     color: var(--font-color);
 }
 .gt-container .gt-header-textarea:focus
 {
-    border: 1px dashed #74b49bb1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.082);
+    padding: 15px !important;
+    font-size: 17px !important;
+    transition-duration: 100ms;
+    background-color: rgba(255, 255, 255, 0) !important;
 }
 .gt-container .gt-header-textarea:hover
-{border: 1px dashed #74b49b;
-    
+{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.082);
+    background-color: rgba(255, 255, 255, 0) !important;
 }
 .gt-container .gt-popup
 {
@@ -270,21 +357,25 @@ hr::before
     border-radius: 10px;
     border: none !important;
 }
+#aside-content .item-headline
+{
+    color: var(--ske);
+}
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .sticky
 {
-    color: #74b49b!important;
+    color: var(--ska)!important;
 }
 #article-container a
 {
-    color: #74b49b;
+    color: var(--ska);
 }
 #article-container a:hover
 {
-    border-color: #74b49b;
+    border-color: var(--ska);
 }
 #post .post-copyright .post-copyright-meta
 {
-    color: #74b49b!important;
+    color: var(--skc)!important;
 }
 #post .post-copyright
 {
@@ -299,7 +390,7 @@ hr::before
 }
 .gt-container .gt-btn
 {
-    background-color: #74b49b!important;
+    background-color: var(--ska)!important;
     border: none !important;
     border-radius: 8px !important;
 }
@@ -322,7 +413,7 @@ hr::before
     line-height: 1.4em;
     bottom: 40px;
     left: 10px;
-    background-color: #74b49b;
+    background-color: var(--ska);
     color: white;
     padding-top: 3px;
     font-size: 8px;
@@ -336,7 +427,7 @@ hr::before
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.233);
     transform: scale(0.9);
     
-    transition: 220ms;
+    transition: 300ms;
 }
 .avatar-img:hover
 {
@@ -371,7 +462,7 @@ hr::before
 }
 #post-info #post-meta a:hover
 {
-    color: #74b49b !important;
+    color: var(--ska) !important;
 }
 #post-info #post-meta
 {
@@ -383,8 +474,8 @@ hr::before
     width: 600px !important;
     padding: 13px !important;
     padding-left: 80px !important;
-    border-radius: 0 12px 12px 0;
-    border: 2px solid #74b49b82;
+    border-radius: 0 11px 18px 0;
+    border: 2px solid var(--ska);
     padding: 15px 5px 15px 15px;
     text-align: left !important;
     border-left: none;
@@ -410,6 +501,7 @@ hr::before
         width: 100% !important;
         border: none !important;
         border-radius: 0 !important;
+        border-bottom: 2px dashed var(--ska) !important;
     }
 }
 #page-header.post-bg:before
@@ -447,21 +539,22 @@ hr::before
 }
 #aside-content .aside-list > .aside-list-item .content > .title:hover, #aside-content .aside-list > .aside-list-item .content > .comment:hover
 {
-    color: #74b49b;
+    color: var(--ska);
 }
 #article-container img
 {
+    margin: 0;
     margin-left: 20%;
     width: 60%;
     border-radius: 8px;
 }
 .gt-container .gt-comment-username
 {
-    color: #74b49b !important;
+    color: var(--ska) !important;
 }
 .gt-container .gt-header-controls-tip
 {
-    color: #74b49b !important;
+    color: var(--ska) !important;
 }
 .gt-container .gt-svg svg
 {
@@ -469,9 +562,8 @@ hr::before
 }
 .gt-container .gt-ico-text
 {
-    background-color: #74b49b !important;
-    color: white !important;
-    padding: 2px !important;
+    color: var(--ska) !important;
+    opacity: 0.6;
 }
 #recent-posts > .recent-post-item .post_cover
 {
@@ -484,10 +576,17 @@ hr::before
     #recent-posts > .recent-post-item .post_cover    {
         height: 180px !important;
     }
+    iframe
+    {
+        
+        margin-left: 10% !important;
+        width: 80%;
+        border-radius: 8px;
+    }
     #article-container img
     {
-        margin-left: 0%;
-        width: 100%;
+        margin-left: 10%;
+        width: 80%;
         border-radius: 8px;
     }
 }
@@ -513,7 +612,7 @@ hr::before
 .post-reward .reward-button
 {
     background: unset !important;
-    color: #74b49b !important;
+    color: var(--ska) !important;
 }
 .post-reward
 {
@@ -534,7 +633,7 @@ blockquote {
 }
 .hbe-button
 {
-    background: #74b49b !important;
+    background: var(--ska) !important;
     border-bottom: none !important;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.041) !important;
     font-weight: unset !important;
@@ -558,11 +657,11 @@ blockquote {
 .hbe-input-label-default::after
 {
     height: 1px !important;
-    background: #74b49b !important;
+    background: var(--ska) !important;
 }
 .hbe-input-label-default::before
 {
-    background-color: #74b49b41 !important;
+    background-color: var(--ska) !important;
     border-radius: 0 !important;
 }
 
@@ -590,7 +689,7 @@ blockquote {
 b, strong
 {
     color: white !important;
-    background-color: #74b49b !important;
+    background-color: var(--ska) !important;
     font-weight: normal !important;
     padding: 2px 3px 0 3px !important;
 }
@@ -654,14 +753,14 @@ blockquote > :last-child:after
 #local-search .search-dialog .local-search-box input:hover
 {
     background-color: white !important;
-    transition-duration: 200ms;
+    transition-duration: 300ms;
 }
 #local-search .search-dialog .local-search-box input:focus
 {
     
     backdrop-filter: blur(8px);
     background-color: white !important;
-    border-bottom: 3px solid #74b49b;
+    border-bottom: 3px solid var(--ska);
 }
 #local-search .search-dialog .local-search__hit-item .search-result
 {
@@ -682,7 +781,7 @@ blockquote > :last-child:after
 
 .gt-container a
 {
-    color: #74b49b !important;
+    color: var(--ska) !important;
     border: none !important;
 }
 .gt-container a:hover
@@ -692,7 +791,7 @@ blockquote > :last-child:after
 
 #yiyan
 {
-    border: 0px dashed #74b49b;
+    border: 0px dashed var(--ska);
     background: url(http://api.muvip.cn/api/bing) !important;
     background-size: cover !important;
     color: white !important;
@@ -712,7 +811,7 @@ blockquote > :last-child:after
 
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap a:hover
 {
-    color: #74b49b !important;
+    color: var(--ska) !important;
 }
 
 #nav .menus_items .menus_item .menus_item_child li
@@ -721,15 +820,15 @@ blockquote > :last-child:after
 }
 #aside-content #card-toc .toc-content .toc-link:hover
 {
-    color: #74b49b !important;
+    color: var(--ska) !important;
 }
 #aside-content .card-tag-cloud a:hover
 {
-    color: #74b49b !important;
+    color: var(--ska) !important;
 }
 .fa-close:before, .fa-multiply:before, .fa-remove:before, .fa-times:before, .fa-xmark:before:hover 
 {
-    color: #74b49b !important;
+    color: var(--skc) !important;
 }
 #page-header.nav-fixed #nav
 {
@@ -738,7 +837,7 @@ blockquote > :last-child:after
 }
 #page-header.nav-fixed #nav a, #page-header.nav-fixed #nav #site-name, #page-header.nav-fixed #nav #toggle-menu:hover 
 {
-    color: #74b49b !important;
+    color: var(--ska) !important;
 }
 #page-header.post-bg:before:hover
 {
@@ -746,7 +845,7 @@ blockquote > :last-child:after
 }
 .article-sort-item-title:hover
 {
-    color: #74b49b !important;
+    color: var(--ska) !important;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .content
 {
@@ -754,13 +853,13 @@ blockquote > :last-child:after
 }
 .hint--error:after
 {
-    background-color: #74b49b !important;
+    background-color: var(--ska) !important;
     text-shadow: none !important;
 }
 #post .post-copyright:before {
     font-size: 8em !important;
     top: 0;
-    color: #74b49b48!important;
+    color: var(--skb) !important;
     z-index: -1 !important;
 }
 #gitalk-container .gt-meta
@@ -772,22 +871,13 @@ blockquote > :last-child:after
 {
     background-color: var(--card-bg) !important;
 }
-#post-comment
-{
-    padding: 20px !important;
-    border: 2px dashed #74b49b8e;
-    border-top: none;
-    overflow: auto;
-    transition-duration: 200ms !important;
-    margin-top: -20px !important;
-}
 .post-copyright
 {
     overflow: hidden !important;
 }
 #post .tag_share .post-meta__tags:hover
 {
-    background-color: #74b49b !important;
+    background-color: var(--ska) !important;
 }
 .search-dialog .search-nav
 {
@@ -808,7 +898,7 @@ table
 .skbo h1
 {
     display: block;
-    border-bottom: 1px dashed #74b49b;
+    border-bottom: 1px dashed var(--ska);
     line-height: 1em !important;
     margin: 0 !important;
     font-weight: bold;
@@ -826,39 +916,59 @@ hr
 }
 div.author-info__description a
 {
-    color: #74b49b !important;
-    border-bottom: 1px dashed #74b49b !important;
+    color: var(--ska) !important;
+    border-bottom: 1px dashed var(--ska) !important;
 }
 div.author-info__description a:hover
 {
-    color: #74b49b88 !important;
-    border-bottom: 1px dashed #74b49b00 !important;
+    color: var(--ska)88 !important;
+    border-bottom: 1px dashed var(--ska) !important;
 }
 div.post-copyright a
 {
-    color: #74b49b !important;
-    border-bottom: 1px dashed #74b49b !important;
+    color: var(--ska) !important;
+    border-bottom: 1px dashed var(--ska) !important;
     text-decoration: none !important;
 }
 div.post-copyright a:hover
 {
-    color: #74b49b88 !important;
-    border-bottom: 1px dashed #74b49b00 !important;
+    color: var(--ska)88 !important;
+    border-bottom: 1px dashed var(--ska) !important;
 }
 .layout > div:first-child:not(.recent-posts)
 {
     padding-top: 40px !important;
 }
-iframe
+article iframe
 {
     border-radius: 8px !important;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.171);
+}
+:root
+{
+    --global-font-size: 15px !important;
+}
+#post-comment .comment-head #comment-switch .switch-btn
+{
+    background-color: var(--ska);
+}
+#post-comment .comment-head #comment-switch .switch-btn.move
+{
+    background-color: var(--ske);
+}
+#post-comment .comment-head #comment-switch .first-comment
+{
+    color: var(--ska);
+}
+#post-comment .comment-head #comment-switch .second-comment
+{
+    color: var(--ske);
 }
 @media (max-width: 900px)
 {
     iframe
     {
-        height: 40vh !important;
+        height: 50vh !important;
     }
     .skbo
     {
@@ -889,7 +999,7 @@ iframe
     {
         box-shadow: none !important;
         border-radius: unset !important;
-        border-bottom: 1px dashed #74b49b !important;
+        border-bottom: 1px dashed var(--ska) !important;
     }
 }
 @media (min-width: 900px)
@@ -899,8 +1009,11 @@ iframe
         display: none;
     }
 }
-
-
+/*評論*/
+.gsc-reactions-count
+{
+    display: none !important;
+}
 
 
 
@@ -908,22 +1021,25 @@ iframe
 <div class="skyy">
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=293 height=86 src="//music.163.com/outchain/player?type=2&id=434871406&auto=1&height=66"></iframe>
 </div>
+*/
 
 
-
-文章背景透明？
-.cardHover, .layout > div:first-child:not(.recent-posts), #recent-posts > .recent-post-item, #aside-content .card-widget, .layout > .recent-posts .pagination > *:not(.space)
+:root
 {
-    background-color: unset !important;
+    --ska: #a28f8f;
+    --skb: #f3e6c1a4;
+    --skc: #c5b8a5;
+    --ske: #8696a7;
+    --font-color: #6b5152 !important;
 }
 
 
-
+/*
 特别主题色代码
 :root {
     --global-bg: #d1e2d1 !important;
     --card-bg: #d1e2d1 !important;
-    --text-highlight-color: #74b49b;
+    --text-highlight-color: var(--ska);
     
   }
   #page-header.not-top-img #nav
