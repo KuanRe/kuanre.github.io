@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">
 
 #sidebar #sidebar-menus .menus_items .site-page
 {
@@ -145,11 +145,12 @@ body
 }
 #footer
 {
-    /* width: 80% !important;
-    margin-left: 10% !important; */
+    width: 80% !important;
+    margin-left: 10% !important;
     color: var(--font-color) ;
-    /* border-radius: 14px 14px 0 0 !important; */
-    border-top: 2px dashed var(--ske);
+    border-radius: 14px 14px 0 0 !important;
+    border: 2px dashed var(--ske);
+    border-bottom: none;
     background-color: var(--card-bg);
 }
 #footer::before
@@ -188,10 +189,6 @@ body
     background-color: var(--ska);
     opacity: 0.7;
 }
-#aside-content .card-webinfo .webinfo .webinfo-item div:first-child
-{
-    color: var(--ske);
-}
 #rightside > div > button, #rightside > div > a {
     border-radius: 50px;
     background-color: var(--ska);
@@ -224,7 +221,7 @@ body
     border-radius: 8px !important;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-title:hover {
-    color: var(--ska) !important;
+    color: var(--font-color) !important;
     text-decoration: none !important;
 }
 
@@ -329,21 +326,37 @@ hr::before
 {
     opacity: 1;
 }
+.gt-container .gt-comment-admin .gt-comment-content::before
+{
+    content: '”';
+    font-size: 60px !important;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
 .gt-container .gt-comment-admin .gt-comment-content
 {
     
-    transition-duration: 400ms !important;
+    transition-duration: 600ms !important;
     background-color: rgba(0, 0, 0, 0.040) !important;
     box-shadow: none !important;
     padding-bottom: 20px !important;
-    border-radius: 0 10px 10px 20px !important;
+    border-radius: 0 10px 20px 20px !important;
     padding: 25px !important;
     color: var(--font-color) !important;
+}
+.gt-container .gt-avatar-github
+{
+    display: none;
+}
+.gt-comments
+{
+    margin-top: 50px;
 }
 .gt-container .gt-comment-admin .gt-comment-content:hover
 {
     
-    box-shadow: 0 0 23px rgba(0, 0, 0, 0.082) !important;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.082) !important;
     background-color: rgba(0, 0, 0, 0) !important;
 }
 .gt-container .gt-avatar img
@@ -374,7 +387,7 @@ hr::before
     padding-top: 15px !important;
     border-radius: 15px 20px 0 15px !important;
     border: 1px dashed rgba(0, 0, 0, 0.027) !important;
-    min-height: 10px !important;
+    min-height: 100px !important;
     resize: vertical !important;
     color: var(--font-color);
 }
@@ -396,10 +409,6 @@ hr::before
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
     border-radius: 10px;
     border: none !important;
-}
-#aside-content .item-headline
-{
-    color: var(--ske);
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .sticky
 {
@@ -462,18 +471,6 @@ hr::before
 {
     padding-right: 30px !important;
 }
-.avatar-img
-{
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.233);
-    transform: scale(0.9);
-    
-    transition: 300ms;
-}
-.avatar-img:hover
-{
-    box-shadow: none;
-    transform:translateY(20px) scale(1.1);
-}
 .recent-post-item
 {
     box-shadow:  20px 20px 60px #d9d9d9,
@@ -528,7 +525,7 @@ hr::before
 {
     #page-header.post-bg
     {
-        height: 450px !important;
+        height: 70vh !important;
     }
     .post-title
     {
@@ -857,6 +854,7 @@ blockquote > :last-child:after
 #nav .menus_items .menus_item .menus_item_child li
 {
     background-color: unset !important;
+    z-index: 999 !important;
 }
 #aside-content #card-toc .toc-content .toc-link:hover
 {
@@ -877,7 +875,7 @@ blockquote > :last-child:after
 }
 #page-header.nav-fixed #nav a, #page-header.nav-fixed #nav #site-name, #page-header.nav-fixed #nav #toggle-menu:hover 
 {
-    color: var(--ska) !important;
+    color: var(--ska);
 }
 #page-header.post-bg:before:hover
 {
@@ -946,6 +944,26 @@ table
     color: rgba(255, 255, 255, 0.121) !important;
     font-size: 18px !important;
 }
+.article-sort-title::before
+{
+    border-color: var(--ska) !important;
+}
+.article-sort-title::after
+{
+    background-color: var(--ska) !important;
+}
+.article-sort-item:before
+{
+    border-color: var(--ska) !important;
+}
+.article-sort
+{
+    border-color: var(--ska) !important;
+}
+.list-beauty li:before, .category-lists ul li:before
+{
+    border-color: var(--ska) !important;
+}
 hr
 {
     margin: 20px 0 20px 0 !important;
@@ -1008,7 +1026,7 @@ article iframe
 #nav #toggle-menu
 {
     position: fixed !important;
-    right: 20px;
+    left: 20px;
     top: 80px;
     background-color: var(--card-bg);
     text-align: center;
@@ -1029,7 +1047,7 @@ article iframe
 }
 .cardHover, .error404 #error-wrap .error-content, .layout > div:first-child:not(.recent-posts), #recent-posts > .recent-post-item, #aside-content .card-widget, .layout > .recent-posts .pagination > *:not(.space)
 {
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(29px);
 }
 #post-comment iframe
 {
@@ -1040,6 +1058,214 @@ article iframe
     border-top: none;
     padding-top: 2px !important;
     overflow: auto;
+}
+
+#post-comment .comment-head
+{
+    padding-top: 15px !important;
+    background-color: var(--card-bg) !important;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    border-bottom: 1px solid rgba(133, 133, 133, 0.196);
+}
+.gt-meta
+{
+    z-index: 0 !important;
+}
+#recent-posts > .recent-post-item >.recent-post-info > .article-title:hover
+{
+    color: rgba(245, 222, 179, 0) !important;
+}
+#recent-posts > .recent-post-item >.recent-post-info > .article-title
+{
+    position: relative;
+}
+#recent-posts > .recent-post-item >.recent-post-info > .article-title::before
+{
+    content:'访问以继续阅读 >';
+    opacity: 0;
+    position: absolute;
+    left: 0px ;
+    top: 0px;
+    transition-duration: 400ms;
+    color: var(--ske) !important;
+}
+
+#recent-posts > .recent-post-item >.recent-post-info > .article-title:hover::before
+{
+    opacity: 1;
+    left: 20px;
+}
+#nav #site-name:hover
+{
+    color: rgba(245, 222, 179, 0) !important;
+}
+#nav #site-name
+{
+    position: relative;
+}
+#nav #site-name::before
+{
+    content:'回到主页 >';
+    opacity: 0;
+    position: absolute;
+    left: 20px ;
+    top: -6px;
+    transition-duration: 400ms;
+    color: var(--ska) !important;
+    font-size: 20px !important;
+}
+#nav #site-name:hover::before
+{
+    opacity: 1;
+    left: 40px;
+}
+
+
+
+
+
+.article-sort-item-title:hover
+{
+    color: rgba(245, 222, 179, 0) !important;
+}
+.article-sort-item-title
+{
+    position: relative;
+}
+.article-sort-item-title::before
+{
+    content:'访问以继续阅读 >';
+    opacity: 0;
+    position: absolute;
+    left: 20px ;
+    top: -0px;
+    transition-duration: 400ms;
+    color: var(--ska) !important;
+}
+.article-sort-item-title:hover::before
+{
+    opacity: 1;
+    left: 20px;
+}
+
+
+
+
+
+div.post-copyright a:hover
+{
+    color: rgba(245, 222, 179, 0) !important;
+}
+div.post-copyright a
+{
+    position: relative;
+    
+}
+div.post-copyright a::before
+{
+    content:'访问此链接 >';
+    opacity: 0;
+    position: absolute;
+    left: 20px ;
+    top: -6px;
+    transition-duration: 200ms;
+    color: var(--ska) !important;
+}
+div.post-copyright a:hover::before
+{
+    opacity: 1;
+    left: 20px;
+}
+
+
+
+
+
+                /* 会造成侧边栏变异的代码 */
+                @media(min-width:900px) 
+                {
+                    #aside-content > .card-widget:first-child
+                    {
+                        transition-duration: 400ms;
+                        margin-right: 17px !important;
+                        position: absolute;
+                        bottom: 40vh;
+                        z-index: 2;
+                        padding: 2.5% !important;
+                        padding-top: 60px !important;
+                        width: 21% !important;
+                        border-top: 2px dashed var(--ska);
+                        border-radius: 0 0 8px 8px !important;
+                        backdrop-filter: blur(40px) !important;
+                        opacity: 0.6;
+                    }
+                    #aside-content > .card-widget:first-child:hover
+                    {
+                        opacity: 1;
+                        box-shadow: 0 0 27px rgba(0, 0, 0, 0.085) !important;
+                    }
+                    .card-webinfo
+                    {
+                        backdrop-filter: blur(0) !important;
+                        width: 290px !important;
+                        z-index: 999 !important;
+                        position: absolute !important;
+                        bottom: 70px !important;
+                        right: 20px !important;
+                        color: rgb(255, 255, 255) !important;
+                        background-color: unset !important;
+                    }
+                }
+                
+                #sidebar #sidebar-menus > .avatar-img
+                {
+                    display: none;
+                }
+                #sidebar #sidebar-menus.open
+                {
+                    padding-top: 90px !important;
+                }
+                .avatar-img
+                {
+                    border-radius: 14px 14px 20px 14px !important;
+                    box-shadow: 0 0px 0px 4px rgba(0, 0, 0, 0.064);
+                    width: 80px !important;
+                    height: 80px !important;
+                    transition: 300ms;
+                    background-color: var(--ska);
+                    position: absolute;
+                    top: -30px;
+                    left: 20px;
+                }
+                .avatar-img img:hover
+                {
+                    transform: rotateZ(-0deg) !important;
+                }
+                .card-widget.card-info
+                {
+                    overflow: unset !important;
+                }
+                #aside-content .card-info .author-info__description::first-letter
+                {
+                    font-size: 29px !important;
+                }
+                #aside-content .card-info .author-info__description
+                {
+                    text-align: left !important;
+                }
+                /* 。。 */
+@keyframes a
+{
+    0%
+    {
+        height: 5vh;
+    }
+    100%
+    {
+        height: 90vh;
+    }
 }
 @media (max-width: 900px)
 {
