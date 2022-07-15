@@ -12,11 +12,6 @@
     font-weight: normal;
     font-style: normal;
 }
-div
-{
-    transition-duration: 300ms;
-    border: 2px dashed rgba(0, 0, 255, 0);
-}
 #loading-box
 {
     border: none !important;
@@ -37,11 +32,6 @@ div
 .avatar-img
 {
     border: none;
-}
-
-div:hover
-{
-    border: 2px dotted rgba(143, 143, 143, 0.155);
 }
 #article-container .flink .flink-list > .flink-list-item::before {
     background-color: var(--ska);
@@ -333,6 +323,7 @@ hr::before
 .gt-container .gt-user
 {
     opacity: 0.08;
+    transition-duration: 300ms !important;
 }
 .gt-container .gt-user:hover
 {
