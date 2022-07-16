@@ -928,10 +928,6 @@ blockquote > :last-child:after
 {
     color: var(--ska) !important;
 }
-#recent-posts > .recent-post-item >.recent-post-info > .content
-{
-    display: none;
-}
 .hint--error:after
 {
     background-color: var(--ska) !important;
@@ -1332,7 +1328,15 @@ article iframe
     float: left !important;
     margin-top: 20px !important;
     height: 90px !important;
-    overflow: hidden !important;
+}
+#post-info #post-meta .post-meta-date::before
+{
+    content: '↻';
+    position: absolute !important;
+    top: -10px;
+    right: -10px;
+    color: rgba(255, 255, 255, 0.315);
+    font-size: 30px !important;
 }
 
 #post-info #post-meta span.post-meta-categories
@@ -1357,6 +1361,7 @@ article iframe
     line-height: 1.3em !important;
     margin-top: 10px !important;
     font-size: 13px !important;
+    padding: 7px !important;
 }
 #post-info #post-meta .post-meta-wordcount
 {
