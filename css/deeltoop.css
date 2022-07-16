@@ -29,6 +29,14 @@
     border: none !important;
 
 }
+.gt-container .gt-btn-preview
+{
+    display: none !important;
+}
+.relatedPosts + hr
+{
+    display: none !important;
+}
 .avatar-img
 {
     border: none;
@@ -50,6 +58,10 @@
 {
     margin: 0;
 }
+#gitalk-container .gt-meta
+{
+    font-size: 13px !important;
+}
 .img-alt
 {
     margin: 10px !important;
@@ -65,6 +77,20 @@ article p
     font-family: 'a' !important;
     font-size: 19px !important;
     text-indent: 2em;
+}
+article ol
+{
+    font-family: 'a' !important;
+    font-size: 19px !important;
+}
+article li
+{
+    font-family: 'a' !important;
+    font-size: 19px !important;
+}
+#article-container figure.highlight
+{
+    border-radius: 8px !important;
 }
 @font-face 
 {
@@ -149,9 +175,9 @@ body
     margin-left: 10% !important;
     color: var(--font-color) ;
     border-radius: 14px 14px 0 0 !important;
-    border: 2px dashed var(--ske);
     border-bottom: none;
     background-color: var(--card-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.061);
 }
 #footer::before
 {
@@ -231,11 +257,23 @@ body
     opacity: 0.82;
 }*/
 
-    #aside-content #card-toc .toc-content .toc-link.active {
-        background: var(--ska);
-        color: #fff;
-        border-radius: 4px !important;
+#aside-content #card-toc .toc-content .toc-link.active {
+    background: var(--ska);
+    color: #fff;
+    border-radius: 4px !important;
+}
+#aside-content
+{
+    width: 20% !important;
+}
+@media(min-width:900px) 
+{
+    .layout > div:first-child
+    {
+        width: 78% !important;
     }
+
+}
 @media(max-width:900px) 
 {
     .recent-post-item
@@ -428,10 +466,11 @@ hr::before
 }
 #post .post-copyright
 {
+    padding-top: 23px !important;
     border: none !important;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.082);
     border-radius: 14px;
-    padding-top: 21px !important;
+    font-size: 14px !important;
 }
 #post .post-copyright:hover
 {
@@ -485,65 +524,32 @@ hr::before
     display: none !important;
 }
 
-.post-title
-{
-    text-align: left;
-}
-#page-header #post-info
-{
-    bottom: 50px !important;
-}
-#post-info #post-meta a
-{
-    color: var(--font-color) !important;
-}
-#post-info #post-meta a:hover
-{
-    color: var(--ska) !important;
-}
-#post-info #post-meta
-{
-    position: absolute !important;
-    left: 0;
-    bottom: -100px;
-    background-color: var(--card-bg);
-    color: var(--font-color) !important;
-    width: 600px !important;
-    padding: 13px !important;
-    padding-left: 80px !important;
-    border-radius: 0 11px 18px 0;
-    border: 2px solid var(--ske);
-    padding: 15px 5px 15px 15px;
-    text-align: left !important;
-    border-left: none;
-}
 #page-header.post-bg {
-    height: 90vh !important;
-    background-attachment: fixed !important;
+    height: 70vh !important;
+}
+#page-header.post-bg::before
+{
+    backdrop-filter: blur(0px) !important;
+    /* background-color: #878b6f45; */
+}
+#pagination.pagination-post
+{
+    display: none;
+}
+.tag_share
+{
+    display: none;
 }
 @media(max-width:900px) 
 {
     #page-header.post-bg
     {
-        height: 70vh !important;
+        height: 80vh !important;
     }
     .post-title
     {
         text-align: center;
     }   
-    #post-info #post-meta
-    {
-        text-align: center !important;
-        padding: 20px !important;
-        width: 100% !important;
-        border: none !important;
-        border-radius: 0 !important;
-        border-bottom: 2px dashed var(--ska) !important;
-    }
-}
-#page-header.post-bg:before
-{
-    background-color: rgba(0, 0, 0, 0.11);
 }
 @media(max-width:900px) 
 {
@@ -584,6 +590,8 @@ hr::before
     margin-left: 20%;
     width: 60%;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.073);
+    border: 2px solid rgba(130, 130, 130, 0.13);
 }
 .gt-container .gt-comment-username
 {
@@ -754,10 +762,11 @@ blockquote > :last-child{
 blockquote > :last-child:before
 {
     content:'“';
+    font-size: 30px !important;
 }
 blockquote > :last-child:after
 {
-    content:'”';
+    content:' ”';
 }
 
 
@@ -873,7 +882,11 @@ blockquote > :last-child:after
     background-color: white;
     backdrop-filter: blur(8px);
 }
-#page-header.nav-fixed #nav a, #page-header.nav-fixed #nav #site-name, #page-header.nav-fixed #nav #toggle-menu:hover 
+#nav .site-page:hover
+{
+    color: var(--ske) !important;
+}
+#page-header.nav-fixed #nav a, #page-header.nav-fixed #nav #site-name, #page-header.nav-fixed #nav #toggle-menu 
 {
     color: var(--ska);
 }
@@ -895,11 +908,18 @@ blockquote > :last-child:after
     text-shadow: none !important;
 }
 #post .post-copyright:before {
+    position: absolute !important;
+    top: -10px !important;
+    right: 10px !important;
     opacity: 0.3;
     font-size: 8em !important;
     top: 0;
     color: var(--ska) !important;
     z-index: -1 !important;
+}
+table thead
+{
+    color: var(--ske) !important;
 }
 #gitalk-container .gt-meta
 {
@@ -1083,7 +1103,7 @@ article iframe
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-title::before
 {
-    content:'访问以继续阅读 >';
+    content:'访问来继续阅读 >';
     opacity: 0;
     position: absolute;
     left: 0px ;
@@ -1095,7 +1115,7 @@ article iframe
 #recent-posts > .recent-post-item >.recent-post-info > .article-title:hover::before
 {
     opacity: 1;
-    left: 20px;
+    left: 10px;
 }
 #nav #site-name:hover
 {
@@ -1113,7 +1133,7 @@ article iframe
     left: 20px ;
     top: -6px;
     transition-duration: 400ms;
-    color: var(--ska) !important;
+    color: var(--ske) !important;
     font-size: 20px !important;
 }
 #nav #site-name:hover::before
@@ -1154,30 +1174,6 @@ article iframe
 
 
 
-div.post-copyright a:hover
-{
-    color: rgba(245, 222, 179, 0) !important;
-}
-div.post-copyright a
-{
-    position: relative;
-    
-}
-div.post-copyright a::before
-{
-    content:'访问此链接 >';
-    opacity: 0;
-    position: absolute;
-    left: 20px ;
-    top: -6px;
-    transition-duration: 200ms;
-    color: var(--ska) !important;
-}
-div.post-copyright a:hover::before
-{
-    opacity: 1;
-    left: 20px;
-}
 
 
 
@@ -1189,33 +1185,29 @@ div.post-copyright a:hover::before
                     #aside-content > .card-widget:first-child
                     {
                         transition-duration: 400ms;
-                        margin-right: 17px !important;
-                        position: absolute;
-                        bottom: 40vh;
                         z-index: 2;
-                        padding: 2.5% !important;
-                        padding-top: 60px !important;
-                        width: 21% !important;
-                        border-top: 2px dashed var(--ska);
+                        margin: 20px !important;
+                        padding: 0 !important;
+                        padding-top: 15px !important;
                         border-radius: 0 0 8px 8px !important;
                         backdrop-filter: blur(40px) !important;
-                        opacity: 0.6;
+                        opacity: 1;
+                        margin-top: 70px !important;
                     }
-                    #aside-content > .card-widget:first-child:hover
+                    /* #aside-content > .card-widget:first-child:hover
                     {
                         opacity: 1;
                         box-shadow: 0 0 27px rgba(0, 0, 0, 0.085) !important;
-                    }
+                    } */
                     .card-webinfo
                     {
-                        backdrop-filter: blur(0) !important;
-                        width: 290px !important;
-                        z-index: 999 !important;
-                        position: absolute !important;
-                        bottom: 70px !important;
-                        right: 20px !important;
-                        color: rgb(255, 255, 255) !important;
                         background-color: unset !important;
+                        position: absolute !important;
+                        right: 20px  !important;
+                        top: -300px !important;
+                        width: 300px !important;
+                        color: white !important;
+                        backdrop-filter: blur(0) !important;
                     }
                 }
                 
@@ -1229,44 +1221,25 @@ div.post-copyright a:hover::before
                 }
                 .avatar-img
                 {
-                    border-radius: 14px 14px 20px 14px !important;
-                    box-shadow: 0 0px 0px 4px rgba(0, 0, 0, 0.064);
-                    width: 80px !important;
-                    height: 80px !important;
-                    transition: 300ms;
-                    background-color: var(--ska);
-                    position: absolute;
-                    top: -30px;
-                    left: 20px;
-                }
-                .avatar-img img:hover
-                {
-                    transform: rotateZ(-0deg) !important;
+                    width: 90px !important;
+                    height: 90px !important;
+                    display: none;
                 }
                 .card-widget.card-info
                 {
                     overflow: unset !important;
                 }
-                #aside-content .card-info .author-info__description::first-letter
-                {
-                    font-size: 29px !important;
-                }
                 #aside-content .card-info .author-info__description
                 {
-                    text-align: left !important;
+                    margin-top: 20px;
+                }
+                #aside-content .card-info .author-info__description::before
+                {
+                    content: '🤿';
+                    font-size: 22px !important;
                 }
                 /* 。。 */
-@keyframes a
-{
-    0%
-    {
-        height: 5vh;
-    }
-    100%
-    {
-        height: 90vh;
-    }
-}
+
 @media (max-width: 900px)
 {
     iframe
@@ -1303,21 +1276,113 @@ div.post-copyright a:hover::before
         box-shadow: none !important;
     }
 }
-@media (min-width: 900px)
-{
-    .post_cover.right
-    {
-        display: none;
-    }
-}
 /*評論*/
 .gsc-reactions-count
 {
     display: none !important;
 }
 
+.post-meta-separator
+{
+    display: none !important;
+}
+#post-info #post-meta a
+{
+    color: white !important;
+}
+#post-info #post-meta .post-meta-date
+{
+    padding: 20px !important;
+    background-color: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(7px) !important;
+    border-radius: 16px !important;
+    margin-right: 20px !important;
+    display: block !important;
+    width: 200px !important;
+    float: left !important;
+    margin-top: 20px !important;
+}
 
+#post-info #post-meta span.post-meta-categories
+{
+    padding: 20px !important;
+    background-color: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(7px) !important;
+    border-radius: 16px !important;
+    margin-right: 20px !important;
+    display: block !important;
+    width: 200px !important;
+    float: left !important;
+    margin-top: 20px !important;
+}
 
+#post-info #post-meta .post-meta-wordcount
+{
+    padding: 20px !important;
+    background-color: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(7px) !important;
+    border-radius: 16px !important;
+    margin-right: 20px !important;
+    display: block !important;
+    width: 200px !important;
+    float: left !important;
+    margin-top: 20px !important;
+}
+@media (max-width: 500px)
+{
+    #post-info #post-meta .post-meta-date
+    {
+        width: 92% !important;
+        padding: 10px !important;
+        margin: 4% !important;
+        margin-bottom: 0 !important;
+        margin-top: 10px !important;
+    }
+    #post-info #post-meta span.post-meta-categories
+    {
+        width: 92% !important;
+        padding: 10px !important;
+        margin: 4% !important;
+        margin-bottom: 0 !important;
+        margin-top: 10px !important;
+    }
+    #post-info #post-meta .post-meta-wordcount
+    {
+        width: 92% !important;
+        padding: 10px !important;
+        margin: 4% !important;
+        margin-bottom: 0 !important;
+        margin-top: 10px !important;
+    }
+}
+.post-title
+{
+    text-align: left;
+}
+#page-header #post-info
+{
+    bottom: 50px !important;
+}
+#post-info #post-meta a:hover
+{
+    color: var(--ska) !important;
+}
+/* #post-info #post-meta
+{
+    position: absolute !important;
+    left: 0;
+    bottom: -100px;
+    background-color: var(--card-bg);
+    color: var(--font-color) !important;
+    width: 600px !important;
+    padding: 13px !important;
+    padding-left: 80px !important;
+    border-radius: 0 11px 18px 0;
+    border: 2px solid var(--ske);
+    padding: 15px 5px 15px 15px;
+    text-align: left !important;
+    border-left: none;
+} */
 /*
 <div class="skyy">
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=293 height=86 src="//music.163.com/outchain/player?type=2&id=434871406&auto=1&height=66"></iframe>
@@ -1327,14 +1392,16 @@ div.post-copyright a:hover::before
 
 :root
 {
-    --ska: #9ca8b8;
-    --ske: #7b8b6f;
-    --font-color: #a29988 !important;
+    --ska: #ff7e67;
+    --ske: #a2d5f2;
+    --font-color: #5e5b33 !important;
 }
 
+/*  
 
-/* 特别主题色代码
+    background-attachment: fixed !important;
 :root {
-    --global-bg: #fff5f5 !important;
-    --card-bg: #fff5f5 !important;
+    --global-bg: #f3f7ed !important;
+    --card-bg: #f3f7ed !important;
 }
+/* 特别主题色代码
