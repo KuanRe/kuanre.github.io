@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://kuanre.github.io/link/index.html</loc>
+    
+    <lastmod>2022-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/202207161/</loc>
+    
+    <lastmod>2022-07-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/202207151/</loc>
+    
+    <lastmod>2022-07-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/202207131/</loc>
+    
+    <lastmod>2022-07-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/202206232/</loc>
+    
+    <lastmod>2022-06-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/tags/index.html</loc>
+    
+    <lastmod>2022-02-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-02-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>http://kuanre.github.io/</loc>
+    <lastmod>2022-07-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>http://kuanre.github.io/tags/%E6%AF%95%E4%B8%9A/</loc>
+    <lastmod>2022-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/tags/%E5%9B%BE%E7%89%87/</loc>
+    <lastmod>2022-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/tags/%E4%BC%AA%E5%85%83%E7%B4%A0/</loc>
+    <lastmod>2022-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>http://kuanre.github.io/categories/%E5%8D%9A%E5%AE%A2%E4%B8%8E%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2022-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+</urlset>
