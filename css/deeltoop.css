@@ -4,7 +4,10 @@
 {
     text-align: center;
 }
-
+#post-comment + hr
+{
+    display: none !important;
+}
 @font-face 
 {
     font-family: 'a';
@@ -88,6 +91,15 @@ article li
     font-family: 'a' !important;
     font-size: 19px !important;
 }
+
+article ul p
+{
+    text-indent: 0 !important;
+}
+article li p
+{
+    text-indent: 0 !important;
+}
 #article-container figure.highlight
 {
     border-radius: 8px !important;
@@ -128,6 +140,10 @@ body
 }
 /*整个滚动条的样式*/
 *::-webkit-scrollbar{
+    background-color: rgba(226, 255, 226, 0);
+    width: 3px;
+}
+body::-webkit-scrollbar{
     background-color: rgba(226, 255, 226, 0);
     width: 7px;
 }
@@ -215,6 +231,10 @@ body
     background-color: var(--ska);
     opacity: 0.7;
 }
+#aside-content .aside-list > .aside-list-item .content > .title, #aside-content .aside-list > .aside-list-item .content > .comment
+{
+    font-size: 14px !important;
+}
 #rightside > div > button, #rightside > div > a {
     border-radius: 50px;
     background-color: var(--ska);
@@ -223,7 +243,6 @@ body
 }
 #rightside > div > button:hover, #rightside > div > a:hover {
     background-color: var(--ska);
-    opacity: 0.7;
     transition-duration: 300ms;
     transform: scale(1.1); 
 }
@@ -233,12 +252,10 @@ body
 #pagination .page-number.current {
     border-radius: 10px;
 }
-#aside-content .card-archives ul.card-archive-list > .card-archive-list-item a, #aside-content .card-categories ul.card-category-list > .card-category-list-item a:hover
-{
-    padding-left: 14px !important;
-    background-color: rgba(0, 0, 0, 0.043) !important;
-    
-}
+    #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a, #aside-content .card-categories ul.card-category-list > .card-category-list-item a:hover
+    {
+        padding-left: 10px !important;
+    }
 #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a, #aside-content .card-categories ul.card-category-list > .card-category-list-item a
 {
     margin-bottom: 4px !important;
@@ -297,8 +314,9 @@ body
     }
     #aside-content
     {
-        width: 80%;
+        width: 80% !important;
         margin-left: 10%;
+        text-align: center !important;
     }
 }
 
@@ -532,13 +550,21 @@ hr::before
     backdrop-filter: blur(0px) !important;
     /* background-color: #878b6f45; */
 }
-#pagination.pagination-post
+#rightside-config-show
+{
+    opacity: 1 !important;
+}
+#footnotes
+{
+    border-top: 1px dashed var(--ska);
+}
+#footnotes hr
 {
     display: none;
 }
-.tag_share
+#footnotelist span
 {
-    display: none;
+    font-size: 14px !important;
 }
 @media(max-width:900px) 
 {
@@ -867,11 +893,15 @@ blockquote > :last-child:after
 }
 #aside-content #card-toc .toc-content .toc-link:hover
 {
-    color: var(--ska) !important;
+    color: var(--ske) !important;
 }
 #aside-content .card-tag-cloud a:hover
 {
     color: var(--ska) !important;
+}
+.card-category-list-link:hover
+{
+    background-color: rgba(0, 0, 0, 0.053) !important;
 }
 .fa-close:before, .fa-multiply:before, .fa-remove:before, .fa-times:before, .fa-xmark:before:hover 
 {
@@ -1301,21 +1331,33 @@ article iframe
     width: 200px !important;
     float: left !important;
     margin-top: 20px !important;
+    height: 90px !important;
+    overflow: hidden !important;
 }
 
 #post-info #post-meta span.post-meta-categories
 {
-    padding: 20px !important;
+    padding: 12px !important;
+    padding-top: 30px !important;
+    padding-left: 10px!important;
     background-color: rgba(255, 255, 255, 0.055);
     backdrop-filter: blur(7px) !important;
     border-radius: 16px !important;
     margin-right: 20px !important;
     display: block !important;
-    width: 200px !important;
+    width: 160px !important;
     float: left !important;
     margin-top: 20px !important;
+    height: 90px !important;
+    overflow: hidden !important;
 }
 
+#aside-content #card-toc .toc-content .toc-link
+{
+    line-height: 1.3em !important;
+    margin-top: 10px !important;
+    font-size: 13px !important;
+}
 #post-info #post-meta .post-meta-wordcount
 {
     padding: 20px !important;
@@ -1324,9 +1366,11 @@ article iframe
     border-radius: 16px !important;
     margin-right: 20px !important;
     display: block !important;
-    width: 200px !important;
+    width: 170px !important;
     float: left !important;
     margin-top: 20px !important;
+    height: 90px !important;
+    overflow: hidden !important;
 }
 @media (max-width: 500px)
 {
@@ -1337,6 +1381,7 @@ article iframe
         margin: 4% !important;
         margin-bottom: 0 !important;
         margin-top: 10px !important;
+        height: unset !important;
     }
     #post-info #post-meta span.post-meta-categories
     {
@@ -1345,6 +1390,7 @@ article iframe
         margin: 4% !important;
         margin-bottom: 0 !important;
         margin-top: 10px !important;
+        height: unset !important;
     }
     #post-info #post-meta .post-meta-wordcount
     {
@@ -1353,6 +1399,7 @@ article iframe
         margin: 4% !important;
         margin-bottom: 0 !important;
         margin-top: 10px !important;
+        height: unset !important;
     }
 }
 .post-title
