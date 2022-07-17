@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">
 
 #sidebar #sidebar-menus .menus_items .site-page
 {
@@ -928,6 +928,10 @@ blockquote > :last-child:after
 {
     color: var(--ska) !important;
 }
+#footer-wrap a:hover
+{
+    text-decoration: none !important;
+}
 .hint--error:after
 {
     background-color: var(--ska) !important;
@@ -1444,9 +1448,9 @@ article iframe
 
 :root
 {
-    --ska: #ff7e67;
-    --ske: #a2d5f2;
-    --font-color: #5e5b33 !important;
+    --ska: #f08a5d;
+    --ske: #f9ed69;
+    --font-color: #6a2c70 !important;
 }
 
 /*  
