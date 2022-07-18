@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://kuanre.github.io/202207171/</loc>
+    
+    <lastmod>2022-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://kuanre.github.io/link/index.html</loc>
     
     <lastmod>2022-07-16</lastmod>
@@ -14,6 +23,15 @@
     <loc>http://kuanre.github.io/202207161/</loc>
     
     <lastmod>2022-07-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/202207151/</loc>
+    
+    <lastmod>2022-07-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,22 +76,36 @@
 
   <url>
     <loc>http://kuanre.github.io/</loc>
-    <lastmod>2022-07-17</lastmod>
+    <lastmod>2022-07-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://kuanre.github.io/tags/%E5%9B%BE%E7%89%87/</loc>
-    <lastmod>2022-07-17</lastmod>
+    <loc>http://kuanre.github.io/tags/%E6%AF%95%E4%B8%9A/</loc>
+    <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://kuanre.github.io/tags/%E6%AF%95%E4%B8%9A/</loc>
-    <lastmod>2022-07-17</lastmod>
+    <loc>http://kuanre.github.io/tags/%E5%9B%BE%E7%89%87/</loc>
+    <lastmod>2022-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/tags/%E4%BC%AA%E5%85%83%E7%B4%A0/</loc>
+    <lastmod>2022-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://kuanre.github.io/tags/%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -82,7 +114,7 @@
   
   <url>
     <loc>http://kuanre.github.io/categories/%E5%8D%9A%E5%AE%A2%E4%B8%8E%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2022-07-17</lastmod>
+    <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

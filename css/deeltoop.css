@@ -136,7 +136,7 @@ body
 ::selection
 {
     background-color: var(--ska);
-    color: white;
+    color: rgb(229, 229, 229);
 }
 /*整个滚动条的样式*/
 *::-webkit-scrollbar{
@@ -190,7 +190,7 @@ body::-webkit-scrollbar{
     width: 80% !important;
     margin-left: 10% !important;
     color: var(--font-color) ;
-    border-radius: 14px 14px 0 0 !important;
+    border-radius: 15px 15px 0 0 !important;
     border-bottom: none;
     background-color: var(--card-bg);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.061);
@@ -223,7 +223,7 @@ body::-webkit-scrollbar{
 }
 #aside-content .card-info #card-info-btn {
     background-color: var(--ska);
-    color: white;
+    color: rgb(224, 224, 224);
     border-radius: 40px 40px 0 40px;
     box-shadow: none;
     transition-duration: 350ms;
@@ -238,7 +238,7 @@ body::-webkit-scrollbar{
 #rightside > div > button, #rightside > div > a {
     border-radius: 50px;
     background-color: var(--ska);
-    color: white;
+    color: rgb(220, 220, 220);
     transition-duration: 300ms;
 }
 #rightside > div > button:hover, #rightside > div > a:hover {
@@ -759,7 +759,7 @@ blockquote {
 
 b, strong
 {
-    color: white !important;
+    color: rgb(212, 212, 212) !important;
     background-color: var(--ska) !important;
     font-weight: normal !important;
     padding: 2px 3px 0 3px !important;
@@ -1160,7 +1160,7 @@ article iframe
     content:'回到主页 >';
     opacity: 0;
     position: absolute;
-    left: 20px ;
+    left: 110px ;
     top: -6px;
     transition-duration: 400ms;
     color: var(--ske) !important;
@@ -1169,7 +1169,7 @@ article iframe
 #nav #site-name:hover::before
 {
     opacity: 1;
-    left: 40px;
+    left: 120px;
 }
 
 
@@ -1237,7 +1237,6 @@ article iframe
                         top: -300px !important;
                         width: 300px !important;
                         color: white !important;
-                        backdrop-filter: blur(0) !important;
                     }
                 }
                 
@@ -1343,6 +1342,8 @@ article iframe
     font-size: 30px !important;
 }
 
+
+
 #post-info #post-meta span.post-meta-categories
 {
     padding: 12px !important;
@@ -1381,6 +1382,53 @@ article iframe
     height: 90px !important;
     overflow: hidden !important;
 }
+#recent-posts > .recent-post-item .post_cover.right
+{
+    border-radius: 12px !important;
+    border: 0px solid rgba(0, 0, 0, 0);
+    position: relative;
+    transition-duration: 300ms !important;
+}
+.imgHover, .error404 #error-wrap .error-content .error-img img, .article-sort-item-img img, #recent-posts > .recent-post-item .post_cover img.post_bg, #aside-content .aside-list > .aside-list-item .thumbnail > img
+{
+    filter: brightness(0.6);
+    transform: translateX(-10px) scale(1.1) translateY(-6px) !important;
+}
+.imgHover:hover, .error404 #error-wrap .error-content .error-img img:hover, .article-sort-item-img img:hover, #recent-posts > .recent-post-item .post_cover img.post_bg:hover, #aside-content .aside-list > .aside-list-item .thumbnail > img:hover
+{
+    transform: unset !important;
+}
+#recent-posts > .recent-post-item .post_cover.right:hover
+{
+    border: 4px solid var(--ske);
+}
+#recent-posts > .recent-post-item .post_cover.right::before
+{
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    font-size: 18px !important;
+    color: rgba(74, 56, 56, 0) !important;
+    content: '访问来查看大图 >';
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.166);
+    z-index: 99;
+    transition-duration: 400ms !important;
+}
+#recent-posts > .recent-post-item .post_cover.right:hover::before
+{
+    color: rgb(255, 255, 255) !important;
+    left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 500px)
 {
     #post-info #post-meta .post-meta-date
@@ -1411,6 +1459,11 @@ article iframe
         height: unset !important;
     }
 }
+
+
+
+
+
 .post-title
 {
     text-align: left;
@@ -1422,6 +1475,14 @@ article iframe
 #post-info #post-meta a:hover
 {
     color: var(--ska) !important;
+}
+#post-comment .comment-head #comment-switch
+{
+    background-color: var(--card-bg) !important;
+}
+[data-theme='dark'] #post-comment #comment-switch
+{
+    background-color: black !important;
 }
 /* #post-info #post-meta
 {
@@ -1448,16 +1509,23 @@ article iframe
 
 :root
 {
-    --ska: #f08a5d;
-    --ske: #f9ed69;
-    --font-color: #6a2c70 !important;
+    --ska: #3d84a8;
+    --ske: #46cdcf;
+    --font-color: #5d5425 !important;
+    --global-bg: #f7f5ed !important;
+    --card-bg: #f7f5ed !important;
 }
-
+[data-theme='dark']
+{
+    --text-highlight-color: rgb(190, 190, 190);
+    --ske: #328a8c;
+    --font-color: rgb(199, 187, 158) !important;
+    --card-bg: rgb(0, 0, 0) !important;
+    --global-bg: rgb(0, 0, 0) !important;
+}
 /*  
 
     background-attachment: fixed !important;
 :root {
-    --global-bg: #f3f7ed !important;
-    --card-bg: #f3f7ed !important;
 }
 /* 特别主题色代码
